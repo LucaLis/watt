@@ -3,14 +3,14 @@ package lis.android.watt.test;
 import android.test.ActivityInstrumentationTestCase2;
 import lis.android.watt.*;
 
-public class HelloAndroidActivityTest extends ActivityInstrumentationTestCase2<HelloAndroidActivity> {
+public class HelloAndroidActivityTest extends ActivityInstrumentationTestCase2<WattWelcomeActivity> {
 
     public HelloAndroidActivityTest() {
-        super(HelloAndroidActivity.class); 
+        super(WattWelcomeActivity.class);
     }
 
     public void testActivity() {
-        HelloAndroidActivity activity = getActivity();
+        WattWelcomeActivity activity = getActivity();
         assertNotNull(activity);
     }
 }
