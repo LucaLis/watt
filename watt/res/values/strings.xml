@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">watt</string>
+    <string name="title_define_power_activity">some title</string>
+
 </resources>
