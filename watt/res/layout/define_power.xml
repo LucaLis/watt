@@ -31,4 +31,6 @@
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/powerTextView"/>
     </LinearLayout>
 
+    <Button android:text="Calculate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/calculateButton" android:padding="8dp" android:onClick="startSchowResultsActivity"/>
+
 </LinearLayout>

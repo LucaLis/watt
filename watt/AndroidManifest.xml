@@ -16,6 +16,11 @@
                     android:value="lis.android.watt.WattWelcomeActivity" />
         </activity>
 
+        <activity android:name=".ShowResultsActivity" android:label="@string/show_results_activity_label">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="lis.android.watt.DefinePowerActivity" />
+        </activity>
 
     </application>
 

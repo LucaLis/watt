@@ -1,7 +1,9 @@
 package lis.android.watt;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import de.akquinet.android.androlog.Log;
@@ -19,6 +21,8 @@ public class DefinePowerActivity extends Activity {
 
     public static final int MAX_POWER = 2500;
     public static final int DEFAULT_POWER = 500;
+    private double hoursOfWorkPerDay;
+    private int devicePower;
 
 
     @Override
@@ -31,13 +35,13 @@ public class DefinePowerActivity extends Activity {
         // Log a message (only on dev platform)
         Log.i(this, "onCreate");
 
-        double timePerDay = getIntent().getDoubleExtra(DAILY_WORK_SCHEDULE,0.0);
+        hoursOfWorkPerDay = getIntent().getDoubleExtra(DAILY_WORK_SCHEDULE,0.0);
 
         setContentView(R.layout.define_power);
 
         // display time per day
         TextView hoursField = (TextView) findViewById(R.id.hoursField);
-        hoursField.setText(String.valueOf(timePerDay));
+        hoursField.setText(String.valueOf(hoursOfWorkPerDay));
 
         // set default power
         SeekBar powerSeekBar = (SeekBar) findViewById(R.id.powerSeekBar);
@@ -51,6 +55,7 @@ public class DefinePowerActivity extends Activity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 TextView powerTextView = (TextView) findViewById(R.id.powerTextView);
                 powerTextView.setText(String.valueOf(i));
+                DefinePowerActivity.this.devicePower = i;
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -62,4 +67,11 @@ public class DefinePowerActivity extends Activity {
             }
         });
     }
+
+    public void startSchowResultsActivity(View view) {
+        Intent intent = new Intent(DefinePowerActivity.this, ShowResultsActivity.class);
+        intent.putExtra(ShowResultsActivity.EXTRA_KWH_PER_YEAR,365* hoursOfWorkPerDay *devicePower/1000d);
+        startActivity(intent);
+    }
+
 }
