@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:focusable="true">
 
 
-    <TextView android:text="Work time per day is:" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:focusable="true">
+        <TextView android:text="Work time per day is: " android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/hoursField"
+                  android:text="n/a"/>
+    </LinearLayout>
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/hoursField"/>
 
+    <TextView android:text="Set device power" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/powerSeekBar" android:layout_gravity="left|center_vertical" android:max="2500"
+            android:padding="8dp"/>
+
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:focusable="true">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Device power: "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/powerTextView"/>
+    </LinearLayout>
 
 </LinearLayout>

@@ -2,15 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="lis.android.watt" android:versionCode="1" android:versionName="1.0-SNAPSHOT">
 
-    <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name=".WattWelcomeActivity">
+    <application android:icon="@drawable/icon">
+        <activity android:name=".WattWelcomeActivity" android:label="@string/watt_welcome_activity_label">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".DefinePowerActivity" android:label="@string/title_define_power_activity">
+        <activity android:name=".DefinePowerActivity" android:label="@string/define_power_activity_label">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="lis.android.watt.WattWelcomeActivity" />
