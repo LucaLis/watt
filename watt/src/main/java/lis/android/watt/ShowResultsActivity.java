@@ -41,6 +41,12 @@ public class ShowResultsActivity extends Activity {
         kwhPriceField.setText(String.valueOf(DEFAULT_KWH_PRICE));
 
         double kwhPerYear = getIntent().getDoubleExtra(EXTRA_KWH_PER_YEAR,0.0d);
+
+        // replace with validate methods
+        if(kwhPerYear == 0.0d){
+            throw new RuntimeException("kWh per year set to 0.0d!");
+        }
+
         TextView yearCostTextView = (TextView) findViewById(R.id.yearCostField);
         yearCostTextView.setText(String.valueOf(kwhPerYear*kwhPrice));
 

@@ -22,7 +22,7 @@ public class DefinePowerActivity extends Activity {
     public static final int MAX_POWER = 2500;
     public static final int DEFAULT_POWER = 500;
     private double hoursOfWorkPerDay;
-    private int devicePower;
+    private int devicePower = DEFAULT_POWER;
 
 
     @Override
@@ -70,6 +70,12 @@ public class DefinePowerActivity extends Activity {
 
     public void startSchowResultsActivity(View view) {
         Intent intent = new Intent(DefinePowerActivity.this, ShowResultsActivity.class);
+
+        // replace with validate methods
+        if(devicePower == 0){
+            throw new RuntimeException("device power set to 0.0d!");
+        }
+
         intent.putExtra(ShowResultsActivity.EXTRA_KWH_PER_YEAR,365* hoursOfWorkPerDay *devicePower/1000d);
         startActivity(intent);
     }

@@ -34,7 +34,10 @@ public class WattWelcomeActivity extends Activity {
         startActivity(intent);
     }
 
-
+    public void onPartOfDayButtonClick(View view) {
+        Intent intent = new Intent(WattWelcomeActivity.this, DefineWorkScheduleActivity.class);
+        startActivity(intent);
+    }
 
 }
 

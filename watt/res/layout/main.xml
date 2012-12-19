@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:focusable="true">
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:focusable="true">
 
-    <TextView android:text="Select work schema" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <TextView android:text="Select work schema" android:layout_width="fill_parent"
+              android:layout_height="wrap_content"/>
 
-    <Button android:text="24h/7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/wholeDayButton"
+    <Button android:text="24h/7" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:id="@+id/wholeDayButton"
             android:onClick="onWholeDayButtonClick"/>
 
-    <Button android:text="Part of day" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/partOfDayButton"/>
+    <Button android:text="Part of day" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:id="@+id/partOfDayButton" android:onClick="onPartOfDayButtonClick"/>
 
 </LinearLayout>

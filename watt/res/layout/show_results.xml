@@ -3,12 +3,12 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:focusable="true">
+              android:focusable="true" android:padding="8dp">
 
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
-                  android:focusable="true">
+                  android:focusable="true" android:padding="8dp">
 
         <TextView android:text="kWh price: " android:layout_width="wrap_content" android:layout_height="wrap_content"
                   android:layout_gravity="center"/>
@@ -17,7 +17,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/kwhPriceField"
-                android:layout_gravity="center" android:inputType="number|numberDecimal" android:minWidth="100dp"/>
+                android:inputType="number|numberDecimal" android:minWidth="100dp"
+                />
     </LinearLayout>
 
     <TextView android:text="Energy consumption cost per: " android:layout_width="wrap_content"

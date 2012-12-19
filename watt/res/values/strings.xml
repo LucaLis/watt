@@ -3,5 +3,5 @@
     <string name="watt_welcome_activity_label">Watt</string>
     <string name="define_power_activity_label">some title</string>
     <string name="show_results_activity_label">schow results label...</string>
-
+    <string name="define_work_schedule_activity_label">def. work schedule</string>
 </resources>

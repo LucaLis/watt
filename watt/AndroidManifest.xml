@@ -10,6 +10,13 @@
             </intent-filter>
         </activity>
 
+
+        <activity android:name=".DefineWorkScheduleActivity" android:label="@string/define_work_schedule_activity_label">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="lis.android.watt.WattWelcomeActivity" />
+        </activity>
+
         <activity android:name=".DefinePowerActivity" android:label="@string/define_power_activity_label">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
