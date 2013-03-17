@@ -23,6 +23,7 @@ public class DefinePowerActivity extends Activity {
     public static final int DEFAULT_POWER = 500;
     private double hoursOfWorkPerDay;
     private int devicePower = DEFAULT_POWER;
+    private double DEFAULT_DAILY_WORK_SCHEDULE = 24d;
 
 
     @Override
@@ -35,7 +36,7 @@ public class DefinePowerActivity extends Activity {
         // Log a message (only on dev platform)
         Log.i(this, "onCreate");
 
-        hoursOfWorkPerDay = getIntent().getDoubleExtra(DAILY_WORK_SCHEDULE,0.0);
+        hoursOfWorkPerDay = getIntent().getDoubleExtra(DAILY_WORK_SCHEDULE, DEFAULT_DAILY_WORK_SCHEDULE);
 
         setContentView(R.layout.define_power);
 

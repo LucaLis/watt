@@ -44,7 +44,7 @@ public class DefineWorkScheduleActivity extends Activity {
         double workTimePerDay = timePicker.getCurrentHour() + timePicker.getCurrentMinute() / 60d;
 
         // replace with validate methods
-        if(workTimePerDay == 0.0d){
+        if (workTimePerDay == 0.0d) {
             throw new RuntimeException("work time per day set to 0.0d!");
         }
 
