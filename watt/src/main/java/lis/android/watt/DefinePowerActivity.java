@@ -22,7 +22,7 @@ public class DefinePowerActivity extends Activity {
     public static final int MAX_POWER = 2500;
     public static final int DEFAULT_POWER = 500;
     private double hoursOfWorkPerDay;
-    private int devicePower = DEFAULT_POWER;
+    private double devicePower = DEFAULT_POWER;
     private double DEFAULT_DAILY_WORK_SCHEDULE = 24d;
 
 
@@ -56,7 +56,7 @@ public class DefinePowerActivity extends Activity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 TextView powerTextView = (TextView) findViewById(R.id.powerTextView);
                 powerTextView.setText(String.valueOf(i));
-                DefinePowerActivity.this.devicePower = i;
+                devicePower = i;
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -73,11 +73,13 @@ public class DefinePowerActivity extends Activity {
         Intent intent = new Intent(DefinePowerActivity.this, ShowResultsActivity.class);
 
         // replace with validate methods
-        if(devicePower == 0){
+        if (devicePower == 0) {
             throw new RuntimeException("device power set to 0.0d!");
         }
 
-        intent.putExtra(ShowResultsActivity.EXTRA_KWH_PER_YEAR,365* hoursOfWorkPerDay *devicePower/1000d);
+        intent.putExtra(ShowResultsActivity.WORK_HOURS_PER_DAY, hoursOfWorkPerDay);
+        intent.putExtra(ShowResultsActivity.DEVICE_POWER, devicePower);
+
         startActivity(intent);
     }
 
