@@ -3,34 +3,38 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:focusable="true" android:padding="8dp">
+    android:focusable="true">
 
 
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:focusable="true">
-        <TextView android:text="Work time per day is: " android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="Work time per day is: " android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:padding="8dp"/>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/hoursField"
                   android:text="n/a"/>
     </LinearLayout>
 
 
-    <TextView android:text="Set device power" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:text="Set device power" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:padding="8dp"/>
     <SeekBar
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/powerSeekBar" android:layout_gravity="left|center_vertical" android:max="2500"
-            android:padding="8dp"/>
+            android:padding="12dp"/>
 
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:focusable="true">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Device power: "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Device power: "
+                  android:padding="8dp"/>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/powerTextView"/>
     </LinearLayout>
 
-    <Button android:text="Calculate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/calculateButton" android:padding="8dp" android:onClick="startSchowResultsActivity"/>
+    <Button android:text="Calculate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/calculateButton"
+            android:onClick="startSchowResultsActivity"/>
 
 </LinearLayout>
